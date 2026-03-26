@@ -1,0 +1,22 @@
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 28px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.hoverable:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+.accent {
+  border-left: 2px solid var(--accent);
+}
+
+.accent:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), -2px 0 20px var(--accent-glow);
+}

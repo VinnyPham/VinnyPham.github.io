@@ -1,0 +1,144 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px 0;
+  transition: background 0.3s ease, padding 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.scrolled {
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(16px);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-right: auto;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.logoAccent {
+  color: var(--accent);
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  align-items: center;
+}
+
+.link {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  letter-spacing: 0.04em;
+}
+
+.link:hover {
+  color: var(--accent);
+}
+
+.githubBtn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.githubBtn:hover {
+  background: var(--accent-dim);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.bar {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text-primary);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.barOpen {
+  composes: bar;
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.barOpen2 {
+  composes: bar;
+  opacity: 0;
+}
+
+.barOpen3 {
+  composes: bar;
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+    position: fixed;
+    inset: 0;
+    top: 0;
+    background: var(--bg);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .link {
+    font-size: 20px;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 101;
+  }
+
+  .githubBtn {
+    display: none;
+  }
+}
