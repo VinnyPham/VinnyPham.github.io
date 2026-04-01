@@ -23,8 +23,15 @@ export default function Button({
   const classes = [styles.btn, styles[variant], className].filter(Boolean).join(' ');
 
   if (href) {
+    const isExternal = href.startsWith('http');
     return (
-      <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
+
+      <a 
+        href={href} 
+        className={classes} 
+        target={isExternal ? '_blank' : undefined} 
+        rel={isExternal ? 'noopener noreferrer' : undefined}
+      >
         {children}
         {icon && <span className={styles.icon}>{icon}</span>}
       </a>

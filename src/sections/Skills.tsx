@@ -1,24 +1,24 @@
 import styles from './Skills.module.css';
 
 const SKILLS = [
-  { name: 'C++', category: 'Systems' },
-  { name: 'Python', category: 'Backend' },
-  { name: 'Java', category: 'Backend' },
-  { name: 'JavaScript', category: 'Full Stack' },
-  { name: 'TypeScript', category: 'Full Stack' },
+  { name: 'C++', category: 'Language' },
+  { name: 'Python', category: 'Language' },
+  { name: 'Java', category: 'Language' },
+  { name: 'JavaScript', category: 'Language' },
+  { name: 'TypeScript', category: 'Language' },
   { name: 'React', category: 'Frontend' },
+  { name: 'HTML/CSS', category: 'Frontend' },
   { name: 'Node.js', category: 'Backend' },
   { name: 'Express.js', category: 'Backend' },
   { name: 'MySQL', category: 'Database' },
   { name: 'Docker', category: 'DevOps' },
   { name: 'AWS', category: 'DevOps' },
   { name: 'Git', category: 'Tools' },
-  { name: 'HTML/CSS', category: 'Frontend' },
-  { name: 'SDL2', category: 'Systems' },
-  { name: 'REST APIs', category: 'Backend' },
+  { name: 'Tableau', category: 'Tools' },
+  { name: 'REST APIs', category: 'Concept' },
 ];
 
-const CATEGORIES = ['All', 'Frontend', 'Backend', 'Systems', 'Database', 'DevOps', 'Tools'];
+const CATEGORIES = ['All', 'Frontend', 'Backend', 'Systems', 'Database', 'DevOps', 'Tools', 'Language', 'Concept'];
 
 export default function Skills() {
   return (
@@ -40,15 +40,15 @@ export default function Skills() {
         <div className={styles.proficiencies}>
           <div className={styles.profGroup}>
             <span className={styles.profLabel}>Advanced</span>
-            <span className={styles.profItems}>C++, JavaScript, React, Node.js, Express.js, MySQL, Python</span>
+            <span className={styles.profItems}>C++, JavaScript, React, Node.js, Express.js, MySQL, Python, Tableau, Excel</span>
           </div>
           <div className={styles.profGroup}>
             <span className={styles.profLabel}>Intermediate</span>
-            <span className={styles.profItems}>TypeScript, Docker, AWS (ECR/RDS/EC2), Java, SDL2</span>
+            <span className={styles.profItems}>TypeScript, Docker, AWS (ECR/RDS/EC2), Java</span>
           </div>
           <div className={styles.profGroup}>
             <span className={styles.profLabel}>Familiar</span>
-            <span className={styles.profItems}>MIPS Assembly, Firebase, Git CI/CD</span>
+            <span className={styles.profItems}>MIPS Assembly, Git CI/CD, MongoDB</span>
           </div>
         </div>
       </div>

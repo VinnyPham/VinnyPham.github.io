@@ -13,23 +13,23 @@ export default function About() {
             <p className={styles.lead}>
               Third-year Computer Science student at{' '}
               <span className={styles.accent}>Cal State Fullerton</span>,
-              building full-stack applications where clean engineering meets
-              real-world problems.
+              with a strong interest in building software that is both 
+              practical and data-driven.
             </p>
             <p className={styles.body}>
-              I started with MIPS assembly and Java, moved into systems
-              programming with C++, and have been deep in the full-stack
-              world ever since — React, Node/Express, MySQL, and more.
-              I&apos;m drawn to projects that combine creativity and logic,
-              whether that&apos;s a trading analytics dashboard or a
-              Discord bot with working Blackjack.
+              Through projects like a climbing performance tracker and a 
+              Discord bot used by 50+ users, I&apos;ve gained experience designing 
+              scalable features, working with databases, and solving real-world 
+              problems through code. I&apos;m particularly interested in the intersection 
+              of software engineering and data analytics, where I can build tools 
+              that not only function well but also provide valuable insights.
             </p>
             <p className={styles.body}>
-              Outside the terminal, you&apos;ll find me at the{' '}
-              <span className={styles.accent}>skatepark</span> or the{' '}
-              <span className={styles.accent}>climbing gym</span> — both
-              scratch the same itch as debugging: identify the problem,
-              break it down, try again.
+              Outside of programming, I enjoy{' '}
+              <span className={styles.accent}>climbing</span> and{' '}
+              <span className={styles.accent}>skateboarding</span>, both
+              of which challenge me to think creatively and stay persistent 
+              when solving problems.
             </p>
           </div>
 
@@ -37,20 +37,20 @@ export default function About() {
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Education</span>
               <span className={styles.infoValue}>Cal State Fullerton</span>
-              <span className={styles.infoSub}>B.S. Computer Science, 2026</span>
+              <span className={styles.infoSub}>B.S. Computer Science, 2027</span>
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Focus</span>
-              <span className={styles.infoValue}>Full Stack Development</span>
-              <span className={styles.infoSub}>React · Node · Databases</span>
+              <span className={styles.infoValue}>Full Stack | Data Analyst</span>
+              <span className={styles.infoSub}>React · Node · MySQL</span>
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Location</span>
-              <span className={styles.infoValue}>Fullerton, CA</span>
+              <span className={styles.infoValue}>Irvine, CA</span>
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Interests</span>
-              <span className={styles.infoValue}>Skateboarding · Climbing · Trading</span>
+              <span className={styles.infoValue}>Climbing · Trading · Gaming</span>
             </div>
           </div>
         </div>
