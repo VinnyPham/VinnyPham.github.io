@@ -26,6 +26,42 @@
   background: var(--accent-dim);
 }
 
+/* Category-specific colors */
+.language {
+  border-left: 4px solid #3b82f6; /* blue */
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.1) 0%, var(--bg-card) 100%);
+}
+
+.frontend {
+  border-left: 4px solid #10b981; /* green */
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.1) 0%, var(--bg-card) 100%);
+}
+
+.backend {
+  border-left: 4px solid #f59e0b; /* amber */
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.1) 0%, var(--bg-card) 100%);
+}
+
+.database {
+  border-left: 4px solid #8b5cf6; /* violet */
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.1) 0%, var(--bg-card) 100%);
+}
+
+.devops {
+  border-left: 4px solid #ef4444; /* red */
+  background: linear-gradient(90deg, rgba(239, 68, 68, 0.1) 0%, var(--bg-card) 100%);
+}
+
+.tools {
+  border-left: 4px solid #6b7280; /* gray */
+  background: linear-gradient(90deg, rgba(107, 114, 128, 0.1) 0%, var(--bg-card) 100%);
+}
+
+.concept {
+  border-left: 4px solid #ec4899; /* pink */
+  background: linear-gradient(90deg, rgba(236, 72, 153, 0.1) 0%, var(--bg-card) 100%);
+}
+
 .skillName {
   font-family: var(--font-mono);
   font-size: 13px;

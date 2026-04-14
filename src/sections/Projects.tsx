@@ -6,13 +6,25 @@ import styles from './Projects.module.css';
 
 const PROJECTS = [
   {
+    title: 'Stock Pipeline',
+    description:
+      'An end-to-end stock data pipeline that ingests, processes, and visualizes financial market data. It fetches real-time stock prices from the Alpha Vantage API, processes the data using PySpark and DuckDB for efficient querying, and serves it through a React frontend. The project is containerized with Docker for easy deployment.',
+    tech: ['React', 'Alpha Vantage', 'PySpark', 'DuckDB', 'Docker'],
+    github: 'https://github.com/VinnyPham/Stock_Pipeline',
+    live: null,
+    badge: 'Featured',
+    image: '/images/stock-pipeline.png',
+    placeholder: { label: 'Stock_Pipeline', color: '#0f1f0f' },
+    number: '01',
+  },
+  {
     title: 'Climbing Performance Tracker',
     description:
       'A full-stack web application built to log and analyze climbing sessions over time. Users can track routes by grade, style, and location, then visualize their progression through charts and session breakdowns. The project was inspired by wanting to bring the same data-driven mindset I apply to coding into my training.',
     tech: ['React', 'Node.js', 'Express.js', 'MySQL'],
     github: 'https://github.com/VinnyPham/Climb_Performance_Analytics',
     live: null,
-    badge: 'Featured',
+    badge: null,
     image: '/images/climbing-tracker.png',
     placeholder: { label: 'Climb_Performance_Analytics', color: '#0f1f0f' },
     number: '01',
@@ -20,7 +32,7 @@ const PROJECTS = [
   {
     title: 'Titan Campus Algorithmic Assistant',
     description:
-      'A Python desktop app that visualizes and teaches core computer science algorithms in an interactive way. It demonstrates graph traversal (BFS/DFS), task scheduling, and string pattern searching — all rendered step-by-step so students can watch the algorithm think. Built with Tkinter for the GUI layer.',
+      'A Python desktop app that visualizes and teaches core computer science algorithms in an interactive way. It demonstrates graph traversal (BFS/DFS), task scheduling, and string pattern searching, all rendered step-by-step so students can watch the algorithm think. Built with Tkinter for the GUI layer.',
     tech: ['Python', 'Tkinter', 'Algorithms', 'Data Structures'],
     github: 'https://github.com/VinnyPham/TitanCampusAlgorithmicAssistant',
     live: null,
@@ -32,7 +44,7 @@ const PROJECTS = [
   {
     title: 'Sudoku Solver',
     description:
-      'A graphical Sudoku solver written in C++ using SDL2 for rendering. The backtracking algorithm solves any valid puzzle and animates each step in real time — you can watch it place numbers, hit a dead end, backtrack, and try again. A fun way to make a classic algorithm visual and tangible.',
+      'A graphical Sudoku solver written in C++ using SDL2 for rendering. The backtracking algorithm solves any valid puzzle and animates each step in real time, you can watch it place numbers, hit a dead end, backtrack, and try again. A fun way to make a classic algorithm visual and tangible.',
     tech: ['C++', 'SDL2', 'Backtracking'],
     github: 'https://github.com/VinnyPham/Sudoku',
     live: null,
@@ -48,7 +60,7 @@ const PROJECTS = [
     tech: ['JavaScript', 'Node.js', 'Discord.js'],
     github: 'https://github.com/VinnyPham/Economy-Discord-Bot',
     live: null,
-    badge: 'Live',
+    badge: null,
     image: '/images/discord-bot.png',
     placeholder: { label: 'Economy-Discord-Bot', color: '#12101f' },
     number: '04',

@@ -6,16 +6,28 @@ const SKILLS = [
   { name: 'Java', category: 'Language' },
   { name: 'JavaScript', category: 'Language' },
   { name: 'TypeScript', category: 'Language' },
+
   { name: 'React', category: 'Frontend' },
   { name: 'HTML/CSS', category: 'Frontend' },
+
   { name: 'Node.js', category: 'Backend' },
   { name: 'Express.js', category: 'Backend' },
+  { name: 'PySpark', category: 'Backend' },
+
+  { name: 'DuckDB', category: 'Database' },
   { name: 'MySQL', category: 'Database' },
+  { name: 'MongoDB', category: 'Database' },
+
   { name: 'Docker', category: 'DevOps' },
   { name: 'AWS', category: 'DevOps' },
+  { name: 'Alpha Vantage API', category: 'DevOps' },
+
   { name: 'Git', category: 'Tools' },
   { name: 'Tableau', category: 'Tools' },
+  { name: 'Excel', category: 'Tools' },
+
   { name: 'REST APIs', category: 'Concept' },
+  { name: 'ETL Pipelines', category: 'Concept' },
 ];
 
 const CATEGORIES = ['All', 'Frontend', 'Backend', 'Systems', 'Database', 'DevOps', 'Tools', 'Language', 'Concept'];
@@ -30,7 +42,7 @@ export default function Skills() {
 
         <div className={styles.grid}>
           {SKILLS.map((skill) => (
-            <div key={skill.name} className={styles.skillItem}>
+            <div key={skill.name} className={`${styles.skillItem} ${styles[skill.category.toLowerCase()]}`}>
               <span className={styles.skillName}>{skill.name}</span>
               <span className={styles.skillCategory}>{skill.category}</span>
             </div>
