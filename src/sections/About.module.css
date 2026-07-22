@@ -1,12 +1,14 @@
 .about {
-  background: var(--bg-secondary);
+  background:
+    linear-gradient(180deg, rgba(114, 240, 199, 0.03), transparent 60%),
+    var(--bg-secondary);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: 1.25fr 360px;
   gap: 64px;
   align-items: start;
 }
@@ -18,15 +20,15 @@
 }
 
 .lead {
-  font-size: 20px;
-  line-height: 1.65;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.7;
   color: var(--text-primary);
   font-weight: 400;
 }
 
 .body {
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.85;
   color: var(--text-secondary);
 }
 
@@ -39,16 +41,22 @@
   flex-direction: column;
   gap: 0;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 18px;
   overflow: hidden;
-  background: var(--bg-card);
+  background: rgba(14, 21, 31, 0.8);
+  box-shadow: var(--shadow-soft);
 }
 
 .infoBlock {
   display: flex;
   flex-direction: column;
-  padding: 18px 22px;
+  padding: 20px 22px;
   border-bottom: 1px solid var(--border);
+  transition: background 0.2s ease;
+}
+
+.infoBlock:hover {
+  background: rgba(114, 240, 199, 0.04);
 }
 
 .infoBlock:last-child {
@@ -65,7 +73,7 @@
 }
 
 .infoValue {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--text-primary);
 }

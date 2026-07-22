@@ -1,47 +1,49 @@
-'use client';
-
-import React from 'react';
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react';
 import styles from './Button.module.css';
 
-type ButtonVariant = 'primary' | 'outline' | 'ghost';
+type SharedProps = {
+  children: ReactNode;
+  variant?: 'primary' | 'outline' | 'ghost';
+  icon?: string;
+  className?: string;
+};
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant;
-  href?: string;
-  children: React.ReactNode;
-  icon?: React.ReactNode;
-}
+type ButtonProps = SharedProps &
+  Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'>;
+
+type AnchorProps = SharedProps &
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'children'>;
 
 export default function Button({
-  variant = 'primary',
-  href,
   children,
+  variant = 'primary',
   icon,
   className = '',
   ...props
-}: ButtonProps) {
+}: ButtonProps | AnchorProps) {
   const classes = [styles.btn, styles[variant], className].filter(Boolean).join(' ');
 
-  if (href) {
-    const isExternal = href.startsWith('http');
+  if ('href' in props && props.href) {
+    const { href, target, rel, ...anchorProps } = props as AnchorProps;
     return (
-
-      <a 
-        href={href} 
-        className={classes} 
-        target={isExternal ? '_blank' : undefined} 
-        rel={isExternal ? 'noopener noreferrer' : undefined}
+      <a
+        href={href}
+        target={target}
+        rel={rel}
+        className={classes}
+        {...anchorProps}
       >
-        {children}
-        {icon && <span className={styles.icon}>{icon}</span>}
+        <span>{children}</span>
+        {icon ? <span className={styles.icon}>{icon}</span> : null}
       </a>
     );
   }
 
+  const buttonProps = props as ButtonProps;
   return (
-    <button className={classes} {...props}>
-      {children}
-      {icon && <span className={styles.icon}>{icon}</span>}
+    <button className={classes} {...buttonProps}>
+      <span>{children}</span>
+      {icon ? <span className={styles.icon}>{icon}</span> : null}
     </button>
   );
 }

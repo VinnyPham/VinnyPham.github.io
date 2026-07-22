@@ -4,20 +4,20 @@
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 20px 0;
+  padding: 18px 0;
   transition: background 0.3s ease, padding 0.3s ease, border-bottom 0.3s ease;
   border-bottom: 1px solid transparent;
 }
 
 .scrolled {
-  background: rgba(10, 10, 10, 0.92);
-  backdrop-filter: blur(16px);
-  padding: 14px 0;
+  background: rgba(7, 11, 16, 0.78);
+  backdrop-filter: blur(18px);
+  padding: 12px 0;
   border-bottom: 1px solid var(--border);
 }
 
 .nav {
-  max-width: 1100px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 0 32px;
   display: flex;
@@ -42,40 +42,45 @@
 .links {
   display: flex;
   list-style: none;
-  gap: 32px;
+  gap: 10px;
   align-items: center;
 }
 
 .link {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-secondary);
   text-decoration: none;
-  transition: color 0.2s ease;
+  padding: 9px 12px;
+  border-radius: 999px;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
   letter-spacing: 0.04em;
+  border: 1px solid transparent;
 }
 
 .link:hover {
   color: var(--accent);
+  background: rgba(114, 240, 199, 0.07);
+  border-color: rgba(114, 240, 199, 0.18);
 }
 
 .githubBtn {
   font-family: var(--font-mono);
   font-size: 12px;
-  padding: 8px 16px;
-  border: 1px solid var(--accent);
+  padding: 9px 16px;
+  border: 1px solid rgba(114, 240, 199, 0.45);
   color: var(--accent);
-  border-radius: 3px;
+  border-radius: 999px;
   cursor: pointer;
   transition: all 0.2s ease;
-  background: transparent;
+  background: rgba(114, 240, 199, 0.06);
   text-decoration: none;
   letter-spacing: 0.05em;
 }
 
 .githubBtn:hover {
-  background: var(--accent-dim);
-  box-shadow: 0 0 16px var(--accent-glow);
+  background: rgba(114, 240, 199, 0.14);
+  box-shadow: 0 0 24px rgba(114, 240, 199, 0.14);
 }
 
 .hamburger {
@@ -118,11 +123,12 @@
     position: fixed;
     inset: 0;
     top: 0;
-    background: var(--bg);
+    background: rgba(7, 11, 16, 0.94);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
+    backdrop-filter: blur(20px);
   }
 
   .links.open {

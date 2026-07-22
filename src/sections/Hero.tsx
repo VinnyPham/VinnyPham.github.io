@@ -24,6 +24,10 @@ export default function Hero() {
 
       <div className={styles.container}>
         <div className={styles.content}>
+          <p className={styles.greeting}>
+            <span className={styles.mono}>SOFTWARE ENGINEER / DATA ANALYST</span>
+          </p>
+
           <h1 className={styles.title}>
             Hello, I&apos;m{' '}
             <span className={styles.name}>
@@ -32,7 +36,7 @@ export default function Hero() {
           </h1>
 
           <p className={styles.subtitle}>
-            <span className={styles.highlight}>Aspring Software Engineer & Data Analyst</span>
+            <span className={styles.highlight}>Aspiring Software Engineer & Data Analyst</span>
             <span ref={cursorRef} className={styles.cursor}>|</span>
           </p>
 

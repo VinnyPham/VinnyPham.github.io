@@ -5,12 +5,11 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
+  grid-template-columns: 0.95fr 1.25fr;
   gap: 80px;
   align-items: start;
 }
 
-/* Info side */
 .info {
   display: flex;
   flex-direction: column;
@@ -26,7 +25,7 @@
 .links {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .contactLink {
@@ -37,7 +36,10 @@
   font-size: 13px;
   color: var(--text-secondary);
   text-decoration: none;
-  transition: color 0.2s ease;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
   letter-spacing: 0.02em;
 }
 
@@ -48,14 +50,16 @@
 
 .contactLink:hover {
   color: var(--accent);
+  border-color: rgba(114, 240, 199, 0.26);
+  background: rgba(114, 240, 199, 0.05);
 }
 
-/* Form side */
 .formWrap {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 20px;
   padding: 36px;
+  box-shadow: var(--shadow-soft);
 }
 
 .form {
@@ -86,14 +90,14 @@
 
 .input,
 .textarea {
-  background: var(--bg-secondary);
+  background: rgba(7, 11, 16, 0.88);
   border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 11px 14px;
+  border-radius: 12px;
+  padding: 12px 14px;
   font-family: var(--font-display);
   font-size: 14px;
   color: var(--text-primary);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   outline: none;
   width: 100%;
   resize: none;
@@ -108,9 +112,9 @@
 .textarea:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-dim);
+  transform: translateY(-1px);
 }
 
-/* Success state */
 .successMsg {
   display: flex;
   flex-direction: column;
@@ -138,7 +142,6 @@
   color: var(--text-secondary);
 }
 
-/* Footer */
 .footer {
   margin-top: 100px;
   padding: 32px 0;

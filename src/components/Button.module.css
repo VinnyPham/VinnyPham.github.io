@@ -5,9 +5,9 @@
   font-family: var(--font-display);
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 12px 24px;
-  border-radius: 4px;
+  letter-spacing: 0.02em;
+  padding: 12px 18px;
+  border-radius: 999px;
   border: 1.5px solid transparent;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -16,26 +16,28 @@
 }
 
 .primary {
-  background: var(--accent);
-  color: #000;
-  border-color: var(--accent);
+  background: linear-gradient(135deg, var(--accent), #a7f2d5);
+  color: #071018;
+  border-color: transparent;
+  box-shadow: 0 8px 24px rgba(132, 240, 202, 0.18);
 }
 
 .primary:hover {
   background: transparent;
   color: var(--accent);
-  box-shadow: 0 0 24px var(--accent-glow);
+  box-shadow: 0 0 0 1px rgba(132, 240, 202, 0.35);
 }
 
 .outline {
-  background: transparent;
-  color: var(--accent);
-  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
 .outline:hover {
-  background: var(--accent-dim);
-  box-shadow: 0 0 16px var(--accent-glow);
+  background: rgba(132, 240, 202, 0.06);
+  color: var(--accent);
+  border-color: rgba(132, 240, 202, 0.35);
 }
 
 .ghost {
